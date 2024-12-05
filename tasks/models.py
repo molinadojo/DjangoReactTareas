@@ -6,3 +6,7 @@ class Task(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     done = models.BooleanField(default=False)
+
+    #con esta funcion puedo acceder a la misma tabla y hacer que sea visible el titulo de la tarea
+    def __str__(self):
+        return self.title
